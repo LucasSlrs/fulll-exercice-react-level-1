@@ -7,15 +7,15 @@ const itemList = [
           {name: 'Item 1', isChecked: false}, 
           {name: 'Item 2', isChecked: false}, 
           {name: 'Item 3', isChecked: false}, 
-          {name: 'Item 4', isChecked: false}
+          {name: 'Item 4', isChecked: false},
       ]
 function Checkboxes() {
   
-    const [ bMultipleCheckboxes, selectAll ] = useState(false) // Initialise the selectAll Checkboxes to false
-    const [ list , changeList ] = useState(itemList) // Create a state list with the array of object inside so the checkboxes will render everytime it is checked
+    const [ bMultipleCheckboxes, selectAll ] = useState(false); // Initialise the selectAll Checkboxes to false
+    const [ list , changeList ] = useState(itemList); // Create a state list with the array of object inside so the checkboxes will render everytime it is checked
 
   const handleSelectAll = (e, index) => { // onChange to select all checkboxes
-    selectAll(e.target.checked)
+    selectAll(e.target.checked);
     if(!bMultipleCheckboxes) {
       list.forEach((el) => {
           let newArr = [...itemList]; // Copying the array because it chage the whole array into true instead of selecting only isChecked element
